@@ -296,7 +296,7 @@ curl -X DELETE http://localhost:5555/episodes/1
 
 MIT License
 
-Copyright (c) 2026 Late Show API Contributors
+Copyright (c) 2026 Late Show API 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 
