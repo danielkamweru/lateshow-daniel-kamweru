@@ -54,4 +54,4 @@ class Appearance(db.Model, SerializerMixin):
         if not isinstance(rating, int) or rating < 1 or rating > 5:
             raise ValueError("Rating must be between 1 and 5")
         return rating
-    1
+    
