@@ -37,6 +37,11 @@ def get_guests():
     guests = Guest.query.all()
     return jsonify([g.to_dict(only=("id", "name", "occupation")) for g in guests]), 200
 
+@app.route("/appearances", methods=["GET"])
+def get_appearances():
+    appearances = Appearance.query.all()
+    return jsonify([a.to_dict(only=("id", "rating", "episode_id", "guest_id")) for a in appearances]), 200
+
 @app.route("/appearances", methods=["POST"])
 def create_appearance():
     data = request.get_json()
