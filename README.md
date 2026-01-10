@@ -174,6 +174,25 @@ Response:
 
 ### Appearances
 
+#### GET /appearances
+Returns all appearances.
+
+```bash
+curl http://localhost:5555/appearances
+```
+
+Response:
+```json
+[
+  {
+    "id": 1,
+    "rating": 4,
+    "episode_id": 1,
+    "guest_id": 1
+  }
+]
+```
+
 #### POST /appearances
 Creates a new guest appearance on an episode.
 
@@ -269,6 +288,9 @@ curl http://localhost:5555/episodes/1
 
 # Get all guests
 curl http://localhost:5555/guests
+
+# Get all appearances
+curl http://localhost:5555/appearances
 
 # Create appearance
 curl -X POST http://localhost:5555/appearances \
