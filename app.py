@@ -33,7 +33,6 @@ def get_guests():
 @app.route("/appearances", methods=["POST"])
 def create_appearance():
     data = request.get_json()
-
     try:
         appearance = Appearance(
             rating=data["rating"],
