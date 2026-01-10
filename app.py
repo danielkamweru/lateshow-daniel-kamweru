@@ -68,4 +68,4 @@ def create_appearance():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5555)
-    1
+    
