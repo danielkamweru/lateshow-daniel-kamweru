@@ -83,7 +83,7 @@ Start the development server:
 python3 app.py
 ```
 
-The API will be available at `http://localhost:5555`
+The API will be available at `http://localhost:5556`
 
 ## API Endpoints
 
@@ -93,7 +93,7 @@ The API will be available at `http://localhost:5555`
 Returns all episodes with basic information.
 
 ```bash
-curl http://localhost:5555/episodes
+curl http://localhost:5556/episodes
 ```
 
 Response:
@@ -111,7 +111,7 @@ Response:
 Returns detailed episode information including appearances.
 
 ```bash
-curl http://localhost:5555/episodes/1
+curl http://localhost:5556/episodes/1
 ```
 
 Success Response (200):
@@ -147,7 +147,7 @@ Error Response (404):
 Deletes an episode and all associated appearances.
 
 ```bash
-curl -X DELETE http://localhost:5555/episodes/1
+curl -X DELETE http://localhost:5556/episodes/1
 ```
 
 Returns: 204 No Content
@@ -158,7 +158,7 @@ Returns: 204 No Content
 Returns all guests.
 
 ```bash
-curl http://localhost:5555/guests
+curl http://localhost:5556/guests
 ```
 
 Response:
@@ -178,7 +178,7 @@ Response:
 Returns all appearances.
 
 ```bash
-curl http://localhost:5555/appearances
+curl http://localhost:5556/appearances
 ```
 
 Response:
@@ -197,7 +197,7 @@ Response:
 Creates a new guest appearance on an episode.
 
 ```bash
-curl -X POST http://localhost:5555/appearances \
+curl -X POST http://localhost:5556/appearances \
   -H "Content-Type: application/json" \
   -d '{
     "rating": 5,
@@ -281,29 +281,29 @@ Test the API endpoints:
 
 ```bash
 # Get all episodes
-curl http://localhost:5555/episodes
+curl http://localhost:5556/episodes
 
 # Get specific episode
-curl http://localhost:5555/episodes/1
+curl http://localhost:5556/episodes/1
 
 # Get all guests
-curl http://localhost:5555/guests
+curl http://localhost:5556/guests
 
 # Get all appearances
-curl http://localhost:5555/appearances
+curl http://localhost:5556/appearances
 
 # Create appearance
-curl -X POST http://localhost:5555/appearances \
+curl -X POST http://localhost:5556/appearances \
   -H "Content-Type: application/json" \
   -d '{"rating": 4, "episode_id": 1, "guest_id": 1}'
 
 # Test validation (invalid rating)
-curl -X POST http://localhost:5555/appearances \
+curl -X POST http://localhost:5556/appearances \
   -H "Content-Type: application/json" \
   -d '{"rating": 6, "episode_id": 1, "guest_id": 1}'
 
 # Delete episode
-curl -X DELETE http://localhost:5555/episodes/1
+curl -X DELETE http://localhost:5556/episodes/1
 ```
 
 ## Contributing
